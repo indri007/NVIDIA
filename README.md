@@ -4,8 +4,9 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-App%20Live%20(Port%208503)-FF4B4B.svg)](https://streamlit.io/)
 [![Journal](https://img.shields.io/badge/Journal-IPSSJ%20Vol.%203%20No.%209%202026-76B900.svg)](https://ipssj.com)
 [![Q1 Draft](https://img.shields.io/badge/Manuscript-Scopus%20Q1%20Draft%20Ready-purple.svg)](paper/manuscript_draft_en.md)
+[![ERD](https://img.shields.io/badge/Architecture-ERD%20Schema%20(3NF)-informational.svg)](docs/ERD.md)
 [![Krippendorff's Alpha](https://img.shields.io/badge/Krippendorff%20α-0.925%20(Robust)-success.svg)](scripts/compute_krippendorff.py)
-[![Tests](https://img.shields.io/badge/pytest-12%20passed-brightgreen.svg)](tests/)
+[![Tests](https://img.shields.io/badge/pytest-13%20passed-brightgreen.svg)](tests/)
 [![Datasheet](https://img.shields.io/badge/Datasheet-Gebru%20et%20al.-blueviolet.svg)](DATASHEET.md)
 [![License](https://img.shields.io/badge/License-MIT%20%2B%20CC--BY--4.0-lightgrey.svg)](LICENSE)
 
@@ -85,13 +86,15 @@ nvidia/
 ├── README.md                      # Dokumentasi komprehensif repositori terpadu
 ├── app.py                         # Interactive Streamlit Web Dashboard (9 Tab Analisis)
 ├── requirements.txt               # Dependensi Python
-├── pyproject.toml                 # Konfigurasi uji otomatis Pytest
+├── pytest.ini                     # Konfigurasi uji otomatis Pytest
 ├── LICENSE                        # Dual-licensing: CC-BY-4.0 (Data) & MIT (Kode)
 ├── CITATION.cff                   # Metadata sitasi standar CFF
 ├── DATASHEET.md                   # Format Datasheets for Datasets (Gebru et al. / LinkML)
 ├── codebook.md                    # Operasionalisasi Silent Authority & rubrik pengodean
 ├── METHODOLOGICAL_PROTOCOL.md     # SOP baku alur kerja pengumpulan data
 ├── View of Silent Authority...pdf # Naskah publikasi resmi IPSSJ Vol. 3 No. 9 2026
+├── docs/
+│   └── ERD.md                     # Entity-Relationship Diagram (3NF) & Spesifikasi Skema
 ├── data/
 │   ├── raw/                       # Data mentah tidak terubah (D1 - D5)
 │   ├── processed/                 # Tabel hasil olahan analisis (snapshots, comp, lookalikes)
@@ -113,13 +116,39 @@ nvidia/
 │   └── validate_schemas.py        # Validasi skema otomatis & verifikasi SHA-256
 ├── tests/
 │   ├── test_nvidia_app.py         # Uji logika dashboard & data IPSSJ (9 unit tests)
-│   ├── test_schemas.py            # Uji integritas skema tabel & hash SHA-256 (1 test)
+│   ├── test_schemas.py            # Uji integritas skema tabel & hash SHA-256 (2 tests)
 │   └── test_pipeline.py           # Uji reliabilitas alpha & output analisis (2 tests)
 └── paper/
     ├── manuscript_draft_en.md     # Draf naskah ilmiah Bahasa Inggris lengkap untuk jurnal Q1
     ├── figures/                   # Gambar publikasi resolusi tinggi (PNG 300 DPI)
     └── tables/                    # Tabel statistik ringkasan hasil analisis (CSV)
 ```
+
+---
+
+## 📐 Entity-Relationship Diagram (ERD & Data Architecture)
+
+Repositori ini mematuhi prinsip normalisasi **Third Normal Form (3NF)** untuk menjamin konsistensi, integritas referensial, serta auditabilitas ilmiah data empiris multi-kasus (lihat detail lengkap di [docs/ERD.md](docs/ERD.md)):
+
+```mermaid
+erDiagram
+    COMPANY ||--o{ CORPORATE_ACCOUNT : owns
+    COMPANY ||--o{ LOOKALIKE_ACCOUNT : targeted_by
+    COMPANY ||--o{ THIRD_PARTY_METRICS : referenced_in
+    COMPANY ||--o{ CODED_DOCUMENT : files
+    COMPANY ||--o{ FINANCIAL_MACRO_METRICS : reports
+
+    CORPORATE_ACCOUNT ||--o{ ACCOUNT_SNAPSHOT : observed_at
+    CORPORATE_ACCOUNT ||--|| PRESENCE_BENCHMARK_CODING : evaluated_by
+
+    AUDIT_EVIDENCE ||--o{ ACCOUNT_SNAPSHOT : verifies
+    AUDIT_EVIDENCE }o--|| RESEARCH_TOOLING : generated_by
+
+    CODED_DOCUMENT ||--o{ THEMATIC_SEGMENT_CODING : contains
+    THEMATIC_CODE_RUBRIC ||--o{ THEMATIC_SEGMENT_CODING : categorizes
+```
+
+Seluruh definisi tipe data, foreign key, constraint integritas, dan skrip DDL SQL tersedia pada dokumentasi [docs/ERD.md](docs/ERD.md).
 
 ---
 

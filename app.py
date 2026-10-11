@@ -691,6 +691,7 @@ elif selected_tab == "📊 9. Dataset Multi-Kasus & Naskah Q1":
         "🚨 D3: Akun Tiruan & Squatting",
         "🌐 D4: Kompensasi Pihak Ketiga",
         "📑 D5: Dokumen Terkode",
+        "📐 Diagram Relasi Entitas (ERD)",
         "📝 Naskah Bahasa Inggris (Q1 Draft)"
     ])
 
@@ -748,8 +749,23 @@ elif selected_tab == "📊 9. Dataset Multi-Kasus & Naskah Q1":
             df_d = pd.read_csv(f5_path)
             st.dataframe(df_d, use_container_width=True)
 
-    # Sub-tab Naskah
+    # Sub-tab ERD
     with sub_tabs[5]:
+        st.markdown("#### 📐 Entity-Relationship Diagram (ERD) & Arsitektur Data Relasional")
+        erd_path = os.path.join(BASE_DIR, "docs", "ERD.md")
+        if os.path.exists(erd_path):
+            with open(erd_path, "r", encoding="utf-8") as f_erd:
+                erd_md = f_erd.read()
+            st.download_button(
+                label="📥 Unduh Dokumen ERD Lengkap (.md)",
+                data=erd_md,
+                file_name="NVIDIA_Silent_Authority_ERD.md",
+                mime="text/markdown"
+            )
+            st.markdown(erd_md)
+
+    # Sub-tab Naskah
+    with sub_tabs[6]:
         st.markdown("#### 📄 Draf Lengkap Naskah Ilmiah (English Manuscript for Q1)")
         manuscript_path = os.path.join(BASE_DIR, "paper", "manuscript_draft_en.md")
         if os.path.exists(manuscript_path):
