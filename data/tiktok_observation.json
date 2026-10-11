@@ -1,0 +1,81 @@
+{
+  "paper_reference": {
+    "title": "Silent Authority dan Paradigma Branding Iceberg: Analisis Strategi Komunikasi Digital NVIDIA di Platform TikTok dalam Era Marketing 5.0",
+    "journal": "Integrative Perspectives of Social and Science Journal (IPSSJ)",
+    "volume_issue": "Vol. 3 No. 9 2026",
+    "e_issn": "3064-4011",
+    "authors": [
+      {
+        "name": "Indri Anjar Kartika Sari",
+        "institution": "Magister Ilmu Komunikasi, Universitas Pembangunan Nasional 'Veteran' Jawa Timur",
+        "email": "indri.cs2026@ids.ac.id",
+        "role": "Corresponding Author"
+      },
+      {
+        "name": "Agung Budi Prasetio",
+        "institution": "Institut Teknologi Tangerang Selatan",
+        "email": "agung@itts.ac.id",
+        "role": "Co-Author"
+      },
+      {
+        "name": "Waspodo Tjipto Subroto",
+        "institution": "Fakultas Ekonomika dan Bisnis, Universitas Negeri Surabaya",
+        "email": "waspodosubroto@unesa.ac.id",
+        "role": "Co-Author"
+      }
+    ]
+  },
+  "accounts": [
+    {
+      "handle": "@nvidia",
+      "platform": "TikTok",
+      "account_type": "Corporate Official",
+      "is_verified": true,
+      "badge_type": "Blue Verification Badge",
+      "followers": 0,
+      "following": 0,
+      "likes": 0,
+      "uploads_count": 0,
+      "bio": "Official NVIDIA TikTok account.",
+      "strategic_purpose": "Defensive Registration & Cyber Identity Protection",
+      "psychological_concept": "Silent Authority",
+      "cognitive_system": "System 2 Thinking (Logical, Measured, Long-Term)",
+      "target_audience": "Institutional Investors, Enterprise Partners, AI Researchers",
+      "engagement_paradigm": "Communicative Silence (Authority without short-form dopamine pursuit)"
+    },
+    {
+      "handle": "@nvidiageforce",
+      "platform": "TikTok",
+      "account_type": "Product & Community (Gaming / Esports)",
+      "is_verified": true,
+      "badge_type": "Blue Verification Badge",
+      "followers": 1450000,
+      "following": 42,
+      "likes": 21800000,
+      "uploads_count": 384,
+      "bio": "The official TikTok of GeForce. Frames Win Games. GeForce RTX.",
+      "strategic_purpose": "Retail Consumer Engagement & Brand Aspiration",
+      "psychological_concept": "Aspirational Consumer Branding",
+      "cognitive_system": "System 1 Thinking (Visual, High Stimulation, Dopamine-driven)",
+      "target_audience": "PC Gamers, Esports Enthusiasts, Hardware Builders, Tech Creators",
+      "engagement_paradigm": "Active Content Demonstration (Ray Tracing, DLSS, RTX Benchmarks)"
+    },
+    {
+      "handle": "GTC Keynote (Jensen Huang)",
+      "platform": "Global Live Stream (YouTube, LinkedIn, Official Site)",
+      "account_type": "Executive & Strategic Keynote",
+      "is_verified": true,
+      "badge_type": "Enterprise Broadcast",
+      "followers": 2900000,
+      "following": 0,
+      "likes": 9800000,
+      "uploads_count": 120,
+      "bio": "GPU Technology Conference - Powering the AI Factory Era.",
+      "strategic_purpose": "Industry Vision Setting & 'Living in the Future' Theater",
+      "psychological_concept": "Charismatic Tech Leadership (Jensen Huang Leather Jacket Persona)",
+      "cognitive_system": "Synthesized System 1 + System 2",
+      "target_audience": "Global Tech Industry, Sovereign Governments, Wall Street, Enterprise Buyers",
+      "engagement_paradigm": "Technological Spectacle backed by Unassailable Lab Inventions"
+    }
+  ]
+}

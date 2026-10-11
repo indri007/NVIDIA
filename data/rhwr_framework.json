@@ -1,0 +1,58 @@
+{
+  "framework_name": "RHWR Crisis Communication Filter",
+  "source": "Sari, Prasetio, & Subroto (2026), IPSSJ Vol. 3 No. 9",
+  "purpose": "Protokol wajib mitigasi krisis komunikasi korporat untuk menutup Interpretation Gap dalam lanskap Marketing 5.0",
+  "pillars": [
+    {
+      "code": "R",
+      "name": "Rational (Rasional)",
+      "question": "Apakah pernyataan komunikasi didukung oleh bukti empiris, validasi matematis, atau fakta data teknis?",
+      "criteria": "Bukan sekadar retorika promosi emosional; setiap klaim memiliki bukti pengujian di laboratorium atau performa metrik audit riil.",
+      "failure_mode": "Hyperbole / Overpromising tanpa kebenaran teknis."
+    },
+    {
+      "code": "H",
+      "name": "Healthy (Sehat)",
+      "question": "Apakah pesan tersebut menjaga kesehatan ekosistem jangka panjang bagi developer dan mitra industri?",
+      "criteria": "Menjaga keberlangsungan mutualisme kemitraan, tidak mematikan inovasi pihak ketiga, serta menjaga stabilitas rantai pasok.",
+      "failure_mode": "Praktik anti-kompetitif yang memicu reaksi balik regulasi atau perlawanan komunitas pengembang."
+    },
+    {
+      "code": "W",
+      "name": "Wise (Bijaksana)",
+      "question": "Apakah langkah komunikasi mempertimbangkan sensitivitas geopolitik, budaya lokal, dan iklim kedaulatan global?",
+      "criteria": "Memperhitungkan ketegangan blok dagang (AS vs China vs Global South), tidak arogan, dan peka terhadap regulasi ekspor multilateral.",
+      "failure_mode": "Keheningan yang disalahartikan sebagai arogansi korporat atau pengabaian pasar regional."
+    },
+    {
+      "code": "R2",
+      "name": "Right (Benar & Beretika)",
+      "question": "Apakah tindakan ini secara moral dan hukum selaras dengan kepatuhan etika AI dan kedaulatan masyarakat?",
+      "criteria": "Kepatuhan terhadap standar AI bertanggung jawab, keamanan data pengguna, hak cipta riset, dan kejujuran hukum publik.",
+      "failure_mode": "Pelanggaran etika kepatuhan regulasi atau bias teknologi yang merusak legitimasi otoritas."
+    }
+  ],
+  "case_scenarios": [
+    {
+      "scenario_id": "sc_01",
+      "title": "Tuduhan Penundaan Pengiriman Chip Blackwell B200",
+      "context": "Rumor di media sosial menyebutkan kendala overheating pada rak server NVL72 yang berpotensi menunda pengiriman ke hyperscalers.",
+      "recommended_action": "Rilis data telemetri pengujian termal transparan (Rational), koordinasi bersama OEM mitra server (Healthy), klarifikasi jadwal batch produksi tanpa memicu spekulasi bursa (Wise), dan konfirmasi kepatuhan spesifikasi teknis (Right).",
+      "traditional_pr_error": "Membantah secara emosional di video TikTok atau mengunggah meme untuk mengejar viralitas."
+    },
+    {
+      "scenario_id": "sc_02",
+      "title": "Migrasi Developer ke Ekosistem CANN Huawei di Asia",
+      "context": "Tekanan sanksi ekspor mendorong institusi riset di Asia mengevaluasi arsitektur open-source CANN milik Huawei.",
+      "recommended_action": "Bukan debat agresif di medsos; melainkan memperkuat program 'Developer Evangelism' lokal, penyediaan kredit komputasi riset akademik (Rational & Healthy), diplomasi teknologi inklusif (Wise), dan kepatuhan penuh pada aturan perdagangan internasional (Right).",
+      "traditional_pr_error": "Mengejek kemampuan chip kompetitor di platform publik yang justru memicu sentimen nasionalisme regional."
+    },
+    {
+      "scenario_id": "sc_03",
+      "title": "Kontroversi Akun TikTok Korporat Kosong (@nvidia)",
+      "context": "Kreator konten menuduh NVIDIA 'kuno dan gagal paham Gen-Z' karena membiarkan akun TikTok resminya tanpa video.",
+      "recommended_action": "Tetap konsisten dengan Silent Authority (System 2 Thinking). Fokuskan kanal TikTok pada @nvidiageforce untuk visual gaming & AI creator, sementara akun korporat tetap sebagai defensive anchor identitas.",
+      "traditional_pr_error": "Memaksa Jensen Huang membuat konten tren tarian pendek TikTok yang merusak wibawa korporat bernilai $3+ Triliun."
+    }
+  ]
+}

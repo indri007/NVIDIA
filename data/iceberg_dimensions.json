@@ -1,0 +1,72 @@
+{
+  "visible_layer": {
+    "title": "Puncak Gunung Es (10% Visible Surface)",
+    "title_en": "Tip of the Iceberg (10% Visible Surface)",
+    "description": "Elemen komunikasi dan representasi publik yang langsung terlihat dan diakses oleh masyarakat umum serta pengguna media sosial.",
+    "elements": [
+      {
+        "name": "Akun TikTok Korporat (@nvidia)",
+        "share_percent": 2.5,
+        "status": "Verified (Blue Badge), 0 Uploads, 0 Followers",
+        "role": "Defensive Registration & Silent Authority signal",
+        "system_type": "System 2 Signaling (Strategic Inaction)"
+      },
+      {
+        "name": "Akun Komunitas Gaming (@nvidiageforce)",
+        "share_percent": 4.5,
+        "status": "Verified, 1.45M Followers, 21.8M Likes, Konten Harian",
+        "role": "Consumer Aspiration, Demonstrasi Ray Tracing & DLSS",
+        "system_type": "System 1 Engagement (High Stimulation & Dopamine)"
+      },
+      {
+        "name": "Keynote GTC Jensen Huang",
+        "share_percent": 3.0,
+        "status": "Broadcast Global (YouTube / LinkedIn), Jutaan Penonton",
+        "role": "Teater Visi Teknologi (Omniverse, Robotika, AI Factory)",
+        "system_type": "Synthesized Spectacle (Charismatic Leadership)"
+      }
+    ]
+  },
+  "invisible_layer": {
+    "title": "Fondasi Bawah Permukaan (90% Invisible Foundation)",
+    "title_en": "Subsurface Foundation (90% Invisible Foundation)",
+    "description": "Fondasi teknologi, finansial, geopolitik, dan arsitektural yang menopang hegemoni nyata NVIDIA di tingkat global.",
+    "elements": [
+      {
+        "name": "Ekosistem Perangkat Lunak CUDA",
+        "share_percent": 30.0,
+        "status": "20 Tahun Pengembangan, 6.2+ Juta Pengembang Terkunci (Lock-in)",
+        "role": "Economic Moat terkuat yang melindungi GPU NVIDIA dari substitusi hardware",
+        "system_type": "Irreplaceable Software Hegemony"
+      },
+      {
+        "name": "Kinerja Finansial Masif (FY26)",
+        "share_percent": 25.0,
+        "status": "Revenue USD 215,9 Miliar, 91.4% Kontribusi AI Data Center",
+        "role": "Bantalan modal tak terbatas untuk ekspansi litbang dan aliansi industri",
+        "system_type": "Structural Capital Supremacy"
+      },
+      {
+        "name": "Infrastruktur Blackwell B200 & Compute AI",
+        "share_percent": 15.0,
+        "status": "Standar De Facto Pusat Data AI Global",
+        "role": "Mesin komputasi utama untuk model fondasi AI (LLM & Multimodal)",
+        "system_type": "Hardware Monopolistic Superiority"
+      },
+      {
+        "name": "Aset Geopolitik Kedaulatan AI",
+        "share_percent": 10.0,
+        "status": "Komponen Kunci Tech Cold War AS vs China",
+        "role": "Perlindungan regulasi tingkat negara dan peran dalam keamanan nasional",
+        "system_type": "Geopolitical Indispensability"
+      },
+      {
+        "name": "Budaya 'The Mission is the Boss'",
+        "share_percent": 10.0,
+        "status": "Organisasi Flat Adaptif, 0 Birokrasi Berlapis",
+        "role": "Inovasi radikal kecepatan tinggi menghadapi dinamika pasar semikonduktor",
+        "system_type": "Radical Organizational Agility"
+      }
+    ]
+  }
+}

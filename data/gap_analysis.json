@@ -1,0 +1,52 @@
+[
+  {
+    "id": "digital_presence",
+    "dimensi": "Kehadiran Digital",
+    "dimensi_en": "Digital Presence",
+    "ekspektasi_publik_10pct": "Konten aktif, tren viral, dan posting harian di akun korporat utama.",
+    "realitas_strategis_90pct": "Defensive Registration & perlindungan identitas siber terverifikasi.",
+    "dampak_strategis": "Silent Authority & aura eksklusivitas korporat kelas atas.",
+    "kategori": "Surface vs Foundation",
+    "level_urgensi": "Rendah (Keselarasan Terencana)"
+  },
+  {
+    "id": "success_metrics",
+    "dimensi": "Metrik Keberhasilan",
+    "dimensi_en": "Success Metrics",
+    "ekspektasi_publik_10pct": "Followers jutaan, jumlah likes melimpah, dan engagement rate tinggi.",
+    "realitas_strategis_90pct": "Revenue FY26 USD 215,9 Miliar, 91% pendapatan Data Center, dominasi pasar chip AI.",
+    "dampak_strategis": "Vanity metrics media sosial terbukti tidak berkorelasi dengan performa finansial industri.",
+    "kategori": "Financial Dominance",
+    "level_urgensi": "Rendah (Substansi Menang Mutlak)"
+  },
+  {
+    "id": "tech_architecture",
+    "dimensi": "Arsitektur Teknologi",
+    "dimensi_en": "Technology Architecture",
+    "ekspektasi_publik_10pct": "Produk visual yang 'keren', estetis, dan instan untuk konsumsi umum.",
+    "realitas_strategis_90pct": "Fondasi ekosistem CUDA 20 tahun + arsitektur chip Blackwell B200.",
+    "dampak_strategis": "Ecosystem Lock-in struktural dan economic moat yang mustahil digoyahkan kompetitor jangka pendek.",
+    "kategori": "Economic Moat",
+    "level_urgensi": "Sedang (Perlu pertahanan dari CANN Huawei)"
+  },
+  {
+    "id": "geopolitics",
+    "dimensi": "Geopolitik & Regulasi",
+    "dimensi_en": "Geopolitics & Sovereignty",
+    "ekspektasi_publik_10pct": "Netralitas komersial korporasi murni dalam perdagangan bebas global.",
+    "realitas_strategis_90pct": "Instrumen strategis Tech Cold War antara AS vs China dan kedaulatan komputasi AI.",
+    "dampak_strategis": "Brand positioning berubah dari sekadar vendor hardware menjadi aset keamanan nasional AS.",
+    "kategori": "Sovereign Asset",
+    "level_urgensi": "Tinggi (Sensitivitas regulasi ekspor)"
+  },
+  {
+    "id": "culture",
+    "dimensi": "Budaya Organisasi",
+    "dimensi_en": "Organizational Culture",
+    "ekspektasi_publik_10pct": "Hierarki birokrasi korporat kaku dengan pembagian divisi silo tradisional.",
+    "realitas_strategis_90pct": "Filosofi 'The mission is the boss', struktur flat adaptif, kepemimpinan visioner Jensen Huang.",
+    "dampak_strategis": "Kecepatan eksekusi dan inovasi radikal melampaui siklus kompetitor di industri semikonduktor.",
+    "kategori": "Corporate Leadership",
+    "level_urgensi": "Sedang (Tuntutan resiliensi tim)"
+  }
+]
