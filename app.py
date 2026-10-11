@@ -113,10 +113,16 @@ def get_all_data():
     gap_data = load_gap_analysis()
     iceberg = load_iceberg_dimensions()
     rhwr = load_rhwr_framework()
-    return obs, fin_df, gap_data, iceberg, rhwr
+    tooling_path = os.path.join(BASE_DIR, "data", "research_tooling_versions.json")
+    tooling_data = {}
+    if os.path.exists(tooling_path):
+        import json
+        with open(tooling_path, "r", encoding="utf-8") as f:
+            tooling_data = json.load(f)
+    return obs, fin_df, gap_data, iceberg, rhwr, tooling_data
 
 try:
-    obs_data, fin_df, gap_data, iceberg_data, rhwr_data = get_all_data()
+    obs_data, fin_df, gap_data, iceberg_data, rhwr_data, tooling_data = get_all_data()
 except Exception as e:
     st.error(f"Gagal memuat dataset: {e}")
     st.stop()
@@ -139,7 +145,8 @@ with st.sidebar:
             "📈 4. Finansial vs Vanity Metrics",
             "⚖️ 5. Gap Analysis (Tabel 2)",
             "🛡️ 6. Simulator Protokol RHWR",
-            "📄 7. Makalah Akademik & Sitasi"
+            "📄 7. Makalah Akademik & Sitasi",
+            "🔬 8. Katalog Alat Riset (Q1)"
         ]
     )
     
@@ -609,6 +616,62 @@ elif selected_tab == "📄 7. Makalah Akademik & Sitasi":
                 file_name="NVIDIA_Silent_Authority_IPSSJ_2026.pdf",
                 mime="application/pdf"
             )
+
+# ==============================================================================
+# TAB 8: KATALOG ALAT RISET & REPRODUKTIBILITAS (Q1)
+# ==============================================================================
+elif selected_tab == "🔬 8. Katalog Alat Riset (Q1)":
+    st.subheader("🔬 Katalog Reproduktibilitas Alat & Pustaka Riset (Q1 Standards)")
+    st.write(
+        "Untuk menjamin keterulangan ilmiah (*reproducibility*) sesuai standar jurnal Q1, "
+        "setiap instrumen perangkat lunak dan repositori pencarian data dicatat secara presisi "
+        "beserta rilis resmi, commit hash Git, dan perannya dalam pengumpulan bukti."
+    )
+
+    if tooling_data and "catalog" in tooling_data:
+        cat_list = tooling_data["catalog"]
+        
+        # Summary metrics
+        m1, m2, m3 = st.columns(3)
+        with m1:
+            st.metric("Total Alat Tercatat", f"{len(cat_list)} Repositori")
+        with m2:
+            st.metric("Standar Format", "LinkML & Markdown Datasheets")
+        with m3:
+            st.metric("Metode Reliabilitas", "Krippendorff's Alpha >= 0.80")
+
+        # Table display
+        df_tools = pd.DataFrame([
+            {
+                "Alat / Repositori": item["name"],
+                "Pengembang": item["developer"],
+                "Versi": item["version"],
+                "Git Commit Hash": item["commit_hash"][:10] + "...",
+                "Fungsi Riset": item["purpose"],
+                "Relevansi": ", ".join(item["research_points"])
+            }
+            for item in cat_list
+        ])
+        st.dataframe(df_tools, use_container_width=True)
+
+        st.markdown("### 📋 Detail Instrumen per Kategori Riset")
+        for item in cat_list:
+            with st.expander(f"📦 {item['name']} ({item['version']}) — {item['developer']}", expanded=False):
+                st.markdown(f"**Tautan Sumber:** [{item['repository']}]({item['repository']})")
+                st.markdown(f"**Commit Hash Penuh:** `{item['commit_hash']}`")
+                st.markdown(f"**Tanggal Commit:** `{item['commit_date']}`")
+                st.markdown(f"**Tujuan Penggunaan:** {item['purpose']}")
+                st.caption(f"Relevansi Poin: {', '.join(item['research_points'])}")
+
+        st.markdown("### 🔬 Catatan Metodologis untuk Poin 6 (Wawancara & Eksperimen)")
+        st.markdown("""
+        Untuk instrumen **Poin 6** (wawancara mendalam kualitatif dan eksperimen survei) yang tidak memiliki repositori kode sumber langsung:
+        1. **Penyimpanan Transkrip & Kode Etik:** Seluruh pedoman wawancara (*interview protocol*) dan kuesioner survei diarsipkan dalam format terstruktur dengan nomor registrasi etika riset.
+        2. **Triangulasi Reliabilitas (Inter-coder Reliability):** Pengodean tematik transkrip wawancara diuji reliabilitas antar-peneliti menggunakan pustaka `fast-krippendorff` (Commit `2813eab7`) dengan ambang batas reliabilitas minimum $\\alpha \\ge 0.800$.
+        3. **Audit Trail Data:** Setiap perubahan skema pengodean dicatat secara *versioned* (*audit trail*) bersamaan dengan metadata datasheet dataset (`bridge2ai/data-sheets-schema`).
+        """)
+    else:
+        st.info("Katalog alat riset sedang dimuat atau belum tersedia.")
 
 # Footer
 st.markdown(f"""

@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-10-11T17:52:00+07:00",
+  "tools_directory": "/Users/jevin/research-tools",
+  "catalog": [
+    {
+      "name": "4cat",
+      "developer": "digitalmethodsinitiative",
+      "repository": "https://github.com/digitalmethodsinitiative/4cat.git",
+      "commit_hash": "55386c5d7030a6a4e0e6182cf594f8db64557802",
+      "commit_date": "2026-10-09 15:50:07 +0200",
+      "version": "main",
+      "purpose": "Capture dan analisis data media sosial terstruktur",
+      "research_points": ["Poin 1", "Poin 2", "Poin 4"]
+    },
+    {
+      "name": "zeeschuimer",
+      "developer": "digitalmethodsinitiative",
+      "repository": "https://github.com/digitalmethodsinitiative/zeeschuimer.git",
+      "commit_hash": "450f5419a2578553ad5bdf0612753f7f5c756f4a",
+      "commit_date": "2026-09-09 15:42:06 +0200",
+      "version": "main",
+      "purpose": "Ekstensi browser untuk snapshot manual saat membuka akun target",
+      "research_points": ["Poin 1", "Poin 2"]
+    },
+    {
+      "name": "tiktok-research-api-wrapper",
+      "developer": "tiktok",
+      "repository": "https://github.com/tiktok/tiktok-research-api-wrapper.git",
+      "commit_hash": "bc2ce0b326f6c36a0c1255079e463dcc1ba74dea",
+      "commit_date": "2024-12-04 10:39:30 -0500",
+      "version": "official",
+      "purpose": "Toolkit resmi TikTok Research API (Python & R)",
+      "research_points": ["Poin 1", "Poin 3", "Poin 4"]
+    },
+    {
+      "name": "tiktok-research-client",
+      "developer": "AndersGiovanni",
+      "repository": "https://github.com/AndersGiovanni/tiktok-research-client.git",
+      "commit_hash": "2bf8b89178126d891867b2d9c996abd4152bafe6",
+      "commit_date": "2023-10-23 14:28:05 +0200",
+      "version": "0.0.21",
+      "purpose": "Klien Python pihak ketiga untuk Research API TikTok",
+      "research_points": ["Poin 1", "Poin 3", "Poin 4"]
+    },
+    {
+      "name": "TikTok-Api",
+      "developer": "davidteather",
+      "repository": "https://github.com/davidteather/TikTok-Api.git",
+      "commit_hash": "99630590a2e24997f69822b0541f396424f44d40",
+      "commit_date": "2026-08-23 22:10:58 -0400",
+      "version": "master",
+      "purpose": "Wrapper scraping tidak resmi",
+      "research_points": ["Poin 1", "Poin 3", "Poin 4"]
+    },
+    {
+      "name": "ArchiveBox",
+      "developer": "ArchiveBox",
+      "repository": "https://github.com/ArchiveBox/ArchiveBox.git",
+      "commit_hash": "90e78d0a66ea6af6c4c90918c5614b0f45a678db",
+      "commit_date": "2026-10-10 20:17:49 +0000",
+      "version": "0.9.74rc91",
+      "purpose": "Pengarsipan mandiri berkala (HTML, PDF, screenshot)",
+      "research_points": ["Poin 1"]
+    },
+    {
+      "name": "dnstwist",
+      "developer": "elceef",
+      "repository": "https://github.com/elceef/dnstwist.git",
+      "commit_hash": "341395377f40761fe4152f43fd18eea757b6069a",
+      "commit_date": "2025-04-15 20:41:44 +0200",
+      "version": "latest",
+      "purpose": "Mesin permutasi pendeteksi typosquatting & peniruan merek",
+      "research_points": ["Poin 3"]
+    },
+    {
+      "name": "pytrends",
+      "developer": "GeneralMills",
+      "repository": "https://github.com/GeneralMills/pytrends.git",
+      "commit_hash": "a9984ffdc9b31d853dde2ab614a77ecbf2bf33a1",
+      "commit_date": "2023-04-22 12:13:29 +0200",
+      "version": "4.9.2",
+      "purpose": "Pseudo-API Google Trends untuk pelacakan volume minat publik",
+      "research_points": ["Poin 4"]
+    },
+    {
+      "name": "BERTopic",
+      "developer": "MaartenGr",
+      "repository": "https://github.com/MaartenGr/BERTopic.git",
+      "commit_hash": "9036123c97aaa9a6cc4bec4a6db1a7caf9209df6",
+      "commit_date": "2026-08-27 16:19:42 +0200",
+      "version": "0.17.4",
+      "purpose": "Topic modeling untuk korpus liputan media, komentar, dan transkrip",
+      "research_points": ["Poin 4", "Poin 5"]
+    },
+    {
+      "name": "fast-krippendorff",
+      "developer": "pln-fing-udelar",
+      "repository": "https://github.com/pln-fing-udelar/fast-krippendorff.git",
+      "commit_hash": "2813eab774a14001b116c9bfbad4de954160d877",
+      "commit_date": "2026-10-08 04:31:33 +0000",
+      "version": "0.9.1.dev0",
+      "purpose": "Kalkulasi reliabilitas antar-koder kualitatif (Krippendorff's alpha)",
+      "research_points": ["Poin 2", "Poin 5"]
+    },
+    {
+      "name": "data-sheets-schema",
+      "developer": "bridge2ai",
+      "repository": "https://github.com/bridge2ai/data-sheets-schema.git",
+      "commit_hash": "ffc4ca922723caa620af2e32a31ad538bc5a5ac9",
+      "commit_date": "2026-10-11 02:57:29 -0700",
+      "version": "0.1.0",
+      "purpose": "Skema formal LinkML untuk standardisasi datasheet dataset",
+      "research_points": ["Poin 4", "Poin 5"]
+    },
+    {
+      "name": "markdown-datasheet-for-datasets",
+      "developer": "JRMeyer",
+      "repository": "https://github.com/JRMeyer/markdown-datasheet-for-datasets.git",
+      "commit_hash": "2bcd503906d977346d5568c3c5c40b296e069e26",
+      "commit_date": "2022-01-26 08:23:47 -0800",
+      "version": "standard",
+      "purpose": "Template Markdown datasheet dokumentasi dataset riset",
+      "research_points": ["Poin 4", "Poin 5"]
+    }
+  ]
+}

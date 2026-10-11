@@ -110,3 +110,13 @@ def test_pdf_paper_exists():
     full_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), pdf_filename)
     assert os.path.isfile(full_path), f"PDF file not found at {full_path}"
     assert os.path.getsize(full_path) > 4000000, "PDF file is unexpectedly small"
+
+
+def test_research_tooling_catalog():
+    json_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "research_tooling_versions.json")
+    assert os.path.exists(json_path)
+    import json
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    assert "catalog" in data
+    assert len(data["catalog"]) >= 12
