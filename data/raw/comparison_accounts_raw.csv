@@ -1,0 +1,21 @@
+company,sector,business_model,platform,handle,presence_type,coder_1,coder_2,notes
+NVIDIA,Semiconductors (AI / GPU),B2B & Consumer,TikTok,@nvidia,defensive,defensive,defensive,Verified empty account
+NVIDIA,Semiconductors (AI / GPU),B2B & Consumer,X,@nvidia,active,active,active,Daily AI announcements
+NVIDIA,Semiconductors (AI / GPU),B2B & Consumer,LinkedIn,nvidia,active,active,active,Enterprise & recruitment
+NVIDIA,Semiconductors (AI / GPU),B2B & Consumer,YouTube,NVIDIA,active,active,active,"GTC keynotes, CUDA tech talks"
+NVIDIA,Semiconductors (AI / GPU),B2B & Consumer,Instagram,@nvidia,active,active,active,"AI art, leadership quotes"
+AMD,Semiconductors (CPU / GPU),B2B & Consumer,TikTok,@amd,active,active,active,"Gaming laptops, processor demos"
+Intel,Semiconductors (Fab / CPU),B2B & Consumer,TikTok,@intel,active,active,active,"Tech culture, student demos"
+Qualcomm,Semiconductors (Mobile / AI),B2B OEM,TikTok,@qualcomm,dormant,dormant,dormant,Infrequent event uploads
+Broadcom,Semiconductors & Infrastructure,B2B Enterprise,TikTok,@broadcom,placeholder,placeholder,placeholder,Unverified placeholder
+TSMC,Foundry / Manufacturing,Pure B2B,TikTok,@tsmc_official,placeholder,placeholder,placeholder,No formal TikTok presence
+ASML,Semiconductor Lithography,Pure B2B,TikTok,@asmlcompany,dormant,dormant,dormant,Occasional engineering clips
+Apple,Big Tech / Consumer Tech,Consumer B2C,TikTok,@apple,active,active,active,Shot on iPhone campaigns
+Microsoft,Big Tech / Enterprise Cloud,B2B & Consumer,TikTok,@microsoft,active,active,active,"Workplace humor, Copilot"
+Google,Big Tech / AI & Search,B2B & Consumer,TikTok,@google,active,active,active,"Search easter eggs, Gemini"
+Amazon AWS,Cloud Hyperscaler,B2B Enterprise,TikTok,@aws_cloud,dormant,dormant,dormant,Re:Invent recaps only
+Meta,Social Media & Open AI,Consumer & Dev,TikTok,@meta,active,active,active,"Ray-Ban Meta, Quest demos"
+Salesforce,Enterprise SaaS,B2B Enterprise,TikTok,@salesforce,dormant,dormant,dormant,Dreamforce recaps
+IBM,Enterprise AI & Mainframe,B2B Enterprise,TikTok,@ibm,dormant,dormant,dormant,Quantum & watsonx snippets
+Oracle,Cloud & Database,B2B Enterprise,TikTok,@oracle,placeholder,placeholder,placeholder,Minimal footprint
+Palantir,Enterprise AI Defense,B2B Enterprise,TikTok,@palantirtech,defensive,defensive,placeholder,Verified defensive stake

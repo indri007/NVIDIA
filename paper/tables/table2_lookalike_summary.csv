@@ -1,0 +1,6 @@
+brand,community_unofficial,educational_fan,parody_impersonation,phishing_flagged,unverified_creator,unverified_fan
+AMD,0,0,0,0,0,1
+ASML,0,1,0,0,0,0
+Intel,0,0,0,0,0,1
+NVIDIA,1,0,1,1,1,1
+Qualcomm,0,0,0,0,0,1

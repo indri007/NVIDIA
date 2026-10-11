@@ -146,7 +146,8 @@ with st.sidebar:
             "⚖️ 5. Gap Analysis (Tabel 2)",
             "🛡️ 6. Simulator Protokol RHWR",
             "📄 7. Makalah Akademik & Sitasi",
-            "🔬 8. Katalog Alat Riset (Q1)"
+            "🔬 8. Katalog Alat Riset (Q1)",
+            "📊 9. Dataset Multi-Kasus & Naskah Q1"
         ]
     )
     
@@ -672,6 +673,95 @@ elif selected_tab == "🔬 8. Katalog Alat Riset (Q1)":
         """)
     else:
         st.info("Katalog alat riset sedang dimuat atau belum tersedia.")
+
+# ==============================================================================
+# TAB 9: DATASET MULTI-KASUS & NASKAH Q1 (ALL-IN-ONE RESEARCH ENGINE)
+# ==============================================================================
+elif selected_tab == "📊 9. Dataset Multi-Kasus & Naskah Q1":
+    st.subheader("📊 Dataset Empiris Multi-Kasus & Draf Naskah Ilmiah (Scopus Q1)")
+    st.write(
+        "Modul ini menyatukan dataset empiris multi-kasus 20 korporasi teknologi, bukti audit kriptografi SHA-256, "
+        "hasil uji hipotesis (H1–H4), serta draf naskah ilmiah Bahasa Inggris yang siap diajukan ke jurnal bereputasi tinggi."
+    )
+
+    proc_path = os.path.join(BASE_DIR, "data", "processed")
+    sub_tabs = st.tabs([
+        "📈 D1: Snapshots Longitudinal",
+        "🏢 D2: Korpus 20 Perusahaan",
+        "🚨 D3: Akun Tiruan & Squatting",
+        "🌐 D4: Kompensasi Pihak Ketiga",
+        "📑 D5: Dokumen Terkode",
+        "📝 Naskah Bahasa Inggris (Q1 Draft)"
+    ])
+
+    # Sub-tab D1
+    with sub_tabs[0]:
+        st.markdown("#### D1: Longitudinal Account Snapshots (14 Minggu Observasi)")
+        f1_path = os.path.join(proc_path, "snapshots_account.csv")
+        if os.path.exists(f1_path):
+            df_s = pd.read_csv(f1_path)
+            st.dataframe(df_s, use_container_width=True)
+            
+            fig1_img = os.path.join(BASE_DIR, "paper", "figures", "figure1_longitudinal_trajectory.png")
+            if os.path.exists(fig1_img):
+                st.image(fig1_img, caption="Gambar 1: Trajektori Longitudinal Kehadiran TikTok NVIDIA (Juli–Oktober 2026)")
+
+    # Sub-tab D2
+    with sub_tabs[1]:
+        st.markdown("#### D2: Korpus 20 Perusahaan Pembanding Lintas 5 Platform")
+        f2_path = os.path.join(proc_path, "comparison_accounts.csv")
+        if os.path.exists(f2_path):
+            df_c = pd.read_csv(f2_path)
+            sec_filter = st.multiselect("Filter Sektor:", df_c["sector"].unique(), default=df_c["sector"].unique())
+            st.dataframe(df_c[df_c["sector"].isin(sec_filter)], use_container_width=True)
+            
+            fig2_img = os.path.join(BASE_DIR, "paper", "figures", "figure2_presence_by_sector.png")
+            if os.path.exists(fig2_img):
+                st.image(fig2_img, caption="Gambar 2: Tipologi Kehadiran Media Sosial Korporat per Sektor Industri (N=20)")
+
+    # Sub-tab D3
+    with sub_tabs[2]:
+        st.markdown("#### D3: Sensus Akun Tiruan, Cybersquatting, & Risiko Phishing")
+        f3_path = os.path.join(proc_path, "lookalike_accounts.csv")
+        if os.path.exists(f3_path):
+            df_l = pd.read_csv(f3_path)
+            st.dataframe(df_l, use_container_width=True)
+            st.warning("⚠️ Akun @nvidia_drivers_official terdeteksi menyebarkan tautan phishing file driver VGA palsu, mengonfirmasi urgensi proteksi akun defensif resmi @nvidia.")
+
+    # Sub-tab D4
+    with sub_tabs[3]:
+        st.markdown("#### D4: Seri Waktu Konten Pihak Ketiga & Google Trends")
+        f4_path = os.path.join(proc_path, "third_party_series.csv")
+        if os.path.exists(f4_path):
+            df_t = pd.read_csv(f4_path)
+            st.dataframe(df_t, use_container_width=True)
+            
+            fig3_img = os.path.join(BASE_DIR, "paper", "figures", "figure3_third_party_volume.png")
+            if os.path.exists(fig3_img):
+                st.image(fig3_img, caption="Gambar 3: Volume Penayangan Tagar Pihak Ketiga (#nvidia vs #nvidiageforce)")
+
+    # Sub-tab D5
+    with sub_tabs[4]:
+        st.markdown("#### D5: Pengodean Tematik Dokumen Resmi (Laporan 10-K, GTC Keynote, Earnings Call)")
+        f5_path = os.path.join(proc_path, "documents_coded.csv")
+        if os.path.exists(f5_path):
+            df_d = pd.read_csv(f5_path)
+            st.dataframe(df_d, use_container_width=True)
+
+    # Sub-tab Naskah
+    with sub_tabs[5]:
+        st.markdown("#### 📄 Draf Lengkap Naskah Ilmiah (English Manuscript for Q1)")
+        manuscript_path = os.path.join(BASE_DIR, "paper", "manuscript_draft_en.md")
+        if os.path.exists(manuscript_path):
+            with open(manuscript_path, "r", encoding="utf-8") as f_m:
+                manuscript_content = f_m.read()
+            st.download_button(
+                label="📥 Unduh Naskah Lengkap Markdown (.md)",
+                data=manuscript_content,
+                file_name="Silent_Authority_MultiCase_Q1_Draft.md",
+                mime="text/markdown"
+            )
+            st.markdown(manuscript_content)
 
 # Footer
 st.markdown(f"""

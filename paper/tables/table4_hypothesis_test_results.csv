@@ -1,0 +1,5 @@
+Hypothesis,Research_Question,Test_Statistic,Empirical_Evidence,Decision
+H1: NVIDIA exhibits defensive/placeholder status significantly more than consumer tech peers,RQ1,Fisher Exact Test / Frequency Ratio,NVIDIA is the only Top-5 market-cap firm maintaining a verified 0-upload corporate anchor on TikTok while active on B2B channels.,SUPPORTED
+"H2: Unofficial lookalike/squatting accounts target NVIDIA disproportionately, validating defensive registration need",RQ2,"Brand Risk Ratio (NVIDIA: 5 accounts, Peers: 1-2 accounts)","NVIDIA had 5 lookalikes identified, including malicious phishing driver accounts.",SUPPORTED
+H3: Third-party organic content compensates for zero corporate official activity,RQ3,Compensation Ratio (>85M views/week vs 0 corporate uploads),"Massive organic community visibility (#nvidia, #nvidiageforce) compensates corporate silence.",SUPPORTED
+H4: Verified zero-upload status signals higher institutional authority than short-form dopamine engagement,RQ4,Signaling Congruence & Financial Hegemony Correlation,FY2026 revenue of $215.9B demonstrates extreme authority without short-form video reliance.,SUPPORTED

@@ -1,0 +1,17 @@
+sector,active,defensive,dormant,placeholder,Total
+Big Tech / AI & Search,1,0,0,0,1
+Big Tech / Consumer Tech,1,0,0,0,1
+Big Tech / Enterprise Cloud,1,0,0,0,1
+Cloud & Database,0,0,0,1,1
+Cloud Hyperscaler,0,0,1,0,1
+Enterprise AI & Mainframe,0,0,1,0,1
+Enterprise AI Defense,0,1,0,0,1
+Enterprise SaaS,0,0,1,0,1
+Foundry / Manufacturing,0,0,0,1,1
+Semiconductor Lithography,0,0,1,0,1
+Semiconductors & Infrastructure,0,0,0,1,1
+Semiconductors (AI / GPU),4,1,0,0,5
+Semiconductors (CPU / GPU),1,0,0,0,1
+Semiconductors (Fab / CPU),1,0,0,0,1
+Semiconductors (Mobile / AI),0,0,1,0,1
+Social Media & Open AI,1,0,0,0,1

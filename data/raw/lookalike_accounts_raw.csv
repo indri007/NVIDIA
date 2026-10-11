@@ -1,0 +1,10 @@
+brand,platform,handle,found_at,reason,status
+NVIDIA,TikTok,@nvidia_geforce_rtx,2026-07-10,Typosquatting / Fan page posing as support,unverified_fan
+NVIDIA,TikTok,@nvidia_drivers_official,2026-07-15,Malicious phishing attempting driver downloads,phishing_flagged
+NVIDIA,TikTok,@nvidia_ai_labs,2026-08-01,Impersonation posting AI generation memes,unverified_creator
+NVIDIA,TikTok,@nvidiaindonesia,2026-08-14,Regional unofficial community re-uploader,community_unofficial
+NVIDIA,TikTok,@jensenhuang_official,2026-09-02,CEO impersonator posting keynote clips,parody_impersonation
+AMD,TikTok,@amd_ryzen_gaming,2026-07-22,Fan benchmark page,unverified_fan
+Intel,TikTok,@intel_arc_gpu,2026-08-11,Community tech re-poster,unverified_fan
+Qualcomm,TikTok,@snapdragon_fans,2026-08-19,Fan account,unverified_fan
+ASML,TikTok,@asml_lithography_fan,2026-09-12,Physics students fan account,educational_fan

@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this dataset or code in your research, please cite it as below."
+authors:
+  - family-names: "Kartika Sari"
+    given-names: "Indri Anjar"
+    orcid: "https://orcid.org/0009-0000-0000-0000"
+    affiliation: "Universitas Pembangunan Nasional 'Veteran' Jawa Timur"
+  - family-names: "Prasetio"
+    given-names: "Agung Budi"
+    affiliation: "Institut Teknologi Tangerang Selatan"
+  - family-names: "Subroto"
+    given-names: "Waspodo Tjipto"
+    affiliation: "Universitas Negeri Surabaya"
+title: "Silent Authority or Neglected Asset? An Empirical Multi-Case Dataset on Corporate Defensive Registration and Third-Party Compensation on TikTok"
+version: 1.0.0
+doi: 10.5281/zenodo.10260000
+date-released: 2026-10-11
+url: "https://github.com/indri007/silent-authority-tiktok-dataset"
+keywords:
+  - silent authority
+  - branding iceberg
+  - TikTok
+  - NVIDIA
+  - defensive registration
+  - signaling theory
+  - semiconductor industry
+  - marketing 5.0
+license: CC-BY-4.0

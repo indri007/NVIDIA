@@ -1,16 +1,16 @@
-# NVIDIA: Silent Authority & Paradigma Branding Iceberg
+# NVIDIA: Silent Authority & Paradigma Branding Iceberg (All-in-One Research Repository)
 
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-App%20Live-FF4B4B.svg)](https://streamlit.io/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App%20Live%20(Port%208503)-FF4B4B.svg)](https://streamlit.io/)
 [![Journal](https://img.shields.io/badge/Journal-IPSSJ%20Vol.%203%20No.%209%202026-76B900.svg)](https://ipssj.com)
-[![E-ISSN](https://img.shields.io/badge/E--ISSN-3064--4011-success.svg)](https://ipssj.com)
-[![Tests](https://img.shields.io/badge/pytest-8%20passed-brightgreen.svg)](tests/)
-[![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
+[![Q1 Draft](https://img.shields.io/badge/Manuscript-Scopus%20Q1%20Draft%20Ready-purple.svg)](paper/manuscript_draft_en.md)
+[![Krippendorff's Alpha](https://img.shields.io/badge/Krippendorff%20α-0.925%20(Robust)-success.svg)](scripts/compute_krippendorff.py)
+[![Tests](https://img.shields.io/badge/pytest-12%20passed-brightgreen.svg)](tests/)
+[![Datasheet](https://img.shields.io/badge/Datasheet-Gebru%20et%20al.-blueviolet.svg)](DATASHEET.md)
+[![License](https://img.shields.io/badge/License-MIT%20%2B%20CC--BY--4.0-lightgrey.svg)](LICENSE)
 
-> **Repositori Resmi Riset Ilmiah & Laboratorium Analisis Interaktif**  
-> Didasarkan pada publikasi:  
-> *“Silent Authority dan Paradigma Branding Iceberg: Analisis Strategi Komunikasi Digital NVIDIA di Platform TikTok dalam Era Marketing 5.0”*  
-> Diterbitkan pada: **Integrative Perspectives of Social and Science Journal (IPSSJ)**, Volume 3 Nomor 9, 2026.
+> **Repositori Riset Ilmiah Terpadu & Laboratorium Analisis Interaktif (All-in-One)**  
+> Mengintegrasikan studi pendahuluan (IPSSJ 2026) dengan **ekspansi empiris multi-kasus longitudinal (20 perusahaan)**, dataset terstandarisasi, audit kriptografi SHA-256, dan draf naskah ilmiah Bahasa Inggris untuk pengajuan jurnal internasional bereputasi tinggi (**Scopus / WoS Q1**).
 
 ---
 
@@ -28,161 +28,151 @@
 
 ---
 
-## 📖 Abstrak / Abstract
-
-### Bahasa Indonesia
-Penelitian ini menganalisis kehadiran digital akun TikTok resmi NVIDIA (`@nvidia`) menggunakan kerangka **Branding Iceberg** dan konsep **Silent Authority**. Penelitian menggunakan desain studi kasus kualitatif dengan observasi digital nonpartisipatif dan analisis dokumen. Unit analisis meliputi status verifikasi akun, aktivitas konten, indikator audiens yang terlihat, arsitektur akun, serta dokumen korporasi dan teknologi yang relevan.
-
-Analisis dilakukan melalui pengodean tematik ke dalam dua lapisan: *visible elements* (10%) dan *invisible foundations* (90%). Triangulasi sumber digunakan dengan membandingkan observasi platform, dokumen resmi NVIDIA, dan literatur akademik. Hasil menunjukkan bahwa minimnya aktivitas pada akun korporat tidak dapat serta-merta dinilai sebagai kelalaian, melainkan bentuk konfigurasi identitas digital terencana (*defensive registration*). Hegemoni ekosistem CUDA, performa finansial masif (Pendapatan FY26 sebesar **USD 215,9 Miliar**), dan struktur komunikasi terpisah membuktikan kemenangan substansi industri atas perlombaan viralitas video pendek dalam lanskap Marketing 5.0.
-
-### English
-This study investigates the digital presence of NVIDIA’s official TikTok account (`@nvidia`) through the dual frameworks of the **Branding Iceberg** and the concept of **Silent Authority**. Employing a qualitative case study design with non-participatory digital observation and document analysis, the inquiry evaluates account verification status, content activity, audience metrics, brand architecture, and corporate developer literature.
-
-Thematic coding reveals a structural duality between visible surface elements (10%) and subsurface foundations (90%). By triangulating live platform observation with public corporate disclosures and academic literature, the study demonstrates that zero-upload corporate activity represents a calculated defensive registration posture rather than strategic negligence. Bolstered by the 20-year CUDA ecosystem lock-in, historic financial dominance (**USD 215.9 Billion revenue in FY26**), and Jensen Huang’s GTC keynote theater, NVIDIA exemplifies how industrial hegemony renders short-form algorithmic vanity metrics irrelevant in Marketing 5.0.
+## ⚠️ Academic Independence & Legal Disclaimer
+**Repositori dan riset ini TIDAK berafiliasi dengan, disponsori oleh, atau didukung secara resmi oleh NVIDIA Corporation maupun TikTok / ByteDance Ltd.**  
+Seluruh data dikumpulkan dari antarmuka publik, keterbukaan laporan keuangan emiten bursa (SEC), dan observasi digital nonpartisipatif. Tidak ada informasi data pribadi perseorangan (PII) yang disimpan atau disebarluaskan.
 
 ---
 
-## 🧊 Kerangka Konseptual (Conceptual Framework)
+## 🧭 Peta Integrasi Repositori Terpadu
 
-### 1. Matriks Branding Iceberg
+Repositori ini menggabungkan dua fase penelitian ke dalam satu ekosistem yang utuh:
+
 ```mermaid
 graph TD
-    subgraph Visible ["🌊 Puncak Gunung Es (10% Visible Surface)"]
-        V1["Akun TikTok Korporat @nvidia<br>(Verified Blue Badge, 0 Uploads, 0 Followers)"]
-        V2["Akun Komunitas Gaming @nvidiageforce<br>(1.45M Followers, 21.8M Likes, DLSS & Ray Tracing)"]
-        V3["Jensen Huang GTC Keynote Broadcast<br>(Teater Visi Teknologi Omniverse & Blackwell)"]
+    subgraph Fase1 ["Fase 1: Studi Pendahuluan Kasus Tunggal (IPSSJ 2026)"]
+        F1A["Artikel Jurnal PDF (IPSSJ Vol. 3 No. 9 2026)"]
+        F1B["Kerangka Branding Iceberg (10% Visible vs 90% Invisible)"]
+        F1C["Kalkulator Silent Authority Index (SAI)"]
+        F1D["Simulator Protokol Krisis Komunikasi RHWR"]
     end
 
-    subgraph Invisible ["⚓ Fondasi Bawah Air (90% Invisible Foundation)"]
-        I1["Ekosistem Perangkat Lunak CUDA<br>(6.2+ Juta Pengembang Terkunci / Lock-in Struktural)"]
-        I2["Kinerja Finansial Masif FY26<br>(Revenue USD 215,9 Miliar, 91.4% AI Data Center)"]
-        I3["Arsitektur Komputasi Blackwell B200<br>(Monopoli Infrastruktur Model Fondasi AI Dunia)"]
-        I4["Instrumen Geopolitik Tech Cold War<br>(Aset Keamanan Nasional & Kedaulatan AI AS vs China)"]
-        I5["Budaya Korporat 'The Mission is the Boss'<br>(Struktur Flat Adaptif & Kecepatan Inovasi Ekstrem)"]
+    subgraph Fase2 ["Fase 2: Ekspansi Multi-Kasus & Pipeline Empiris (Scopus Q1)"]
+        F2A["D1: 14 Minggu Snapshot Longitudinal & SHA-256 Evidence Hashes"]
+        F2B["D2: Korpus 20 Perusahaan Pembanding Lintas 5 Platform"]
+        F2C["D3: Sensus 9 Akun Tiruan, Typosquatting, & Phishing"]
+        F2D["D4: Seri Waktu Kompensasi Pihak Ketiga (>85M views/minggu)"]
+        F2E["D5: Pengodean Tematik Dokumen Resmi (Krippendorff's α = 0.925 / 1.000)"]
+        F2F["Naskah Lengkap Bahasa Inggris (Q1 Draft) + Gambar 300 DPI"]
     end
 
-    Visible -.->|"Ditopang Penuh Oleh"| Invisible
+    subgraph Platform ["Aplikasi Interaktif & Otomasi"]
+        APP["Streamlit Web Dashboard (app.py di Port 8503)"]
+        CLI["Pipeline Analisis Tunggal (run_analysis.py) & Pytest (12 Tests)"]
+    end
+
+    Fase1 --> Platform
+    Fase2 --> Platform
 ```
 
 ---
 
-### 2. Paradigma Silent Authority (System 1 vs System 2 Thinking)
-```mermaid
-flowchart LR
-    A["Algoritma Media Sosial Konvensional<br>(System 1 Thinking)"] -->|"Mengejar Dopamin & Likes"| B["Kerapuhan Reputasi & Vanity Metrics"]
-    
-    C["Strategi Silent Authority NVIDIA<br>(System 2 Thinking)"] -->|"Jangkar Defensif Identitas Legal"| D["Pesan Ancaman bagi Kompetitor"]
-    D -->|"Didukung Ekosistem CUDA & Revenue $215.9B"| E["Otoritas Industri Tanpa Ketergantungan Algoritma"]
+## 📊 Pertanyaan Riset & Hasil Pengujian Hipotesis Empiris (H1–H4)
+
+| Hipotesis | Pertanyaan Riset | Uji Statistik & Bukti Empiris | Status |
+|:---|:---|:---|:---|
+| **H1** | **RQ1: Tipologi Kehadiran** | NVIDIA adalah satu-satunya entitas *mega-cap* ($3T+) yang mempertahankan status `defensive` (0 video, 0 followers) di TikTok sambil aktif setiap hari di saluran B2B (LinkedIn, YouTube, X). | **SUPPORTED** |
+| **H2** | **RQ2: Registrasi Defensif** | Ditemukan 5 akun tiruan bernama NVIDIA (termasuk `@nvidia_drivers_official` yang menyebarkan malware phishing). Registrasi centang biru resmi terbukti krusial melindungi reputasi merek. | **SUPPORTED** |
+| **H3** | **RQ3: Kompensasi Pihak Ketiga** | Tagar organik `#nvidia` mencatat rata-rata **101,25 juta views/minggu**, membuktikan bahwa keheningan akun resmi dikompensasi secara masif oleh komunitas kreator independen. | **SUPPORTED** |
+| **H4** | **RQ4: Otoritas Struktural** | Pendapatan FY2026 sebesar **USD 215,9 Miliar** dan 6,2 juta developer CUDA menegaskan bahwa legitimasi industri dibangun atas dasar *economic switching costs*, bukan metrik viralitas. | **SUPPORTED** |
+
+---
+
+## 📂 Struktur Repositori Terpadu
+
+```text
+nvidia/
+├── README.md                      # Dokumentasi komprehensif repositori terpadu
+├── app.py                         # Interactive Streamlit Web Dashboard (9 Tab Analisis)
+├── requirements.txt               # Dependensi Python
+├── pyproject.toml                 # Konfigurasi uji otomatis Pytest
+├── LICENSE                        # Dual-licensing: CC-BY-4.0 (Data) & MIT (Kode)
+├── CITATION.cff                   # Metadata sitasi standar CFF
+├── DATASHEET.md                   # Format Datasheets for Datasets (Gebru et al. / LinkML)
+├── codebook.md                    # Operasionalisasi Silent Authority & rubrik pengodean
+├── METHODOLOGICAL_PROTOCOL.md     # SOP baku alur kerja pengumpulan data
+├── View of Silent Authority...pdf # Naskah publikasi resmi IPSSJ Vol. 3 No. 9 2026
+├── data/
+│   ├── raw/                       # Data mentah tidak terubah (D1 - D5)
+│   ├── processed/                 # Tabel hasil olahan analisis (snapshots, comp, lookalikes)
+│   ├── financial_vs_social.csv    # Seri waktu finansial vs metrik medsos (FY21-FY26)
+│   ├── gap_analysis.json          # 5 dimensi Gap Analysis ekspektasi vs realitas
+│   ├── iceberg_dimensions.json    # Taksonomi bobot 10% Visible vs 90% Invisible
+│   ├── rhwr_framework.json        # Protokol krisis komunikasi RHWR
+│   ├── tiktok_observation.json    # Data observasi empiris akun TikTok & Keynote
+│   └── research_tooling_versions.json # Katalog versi 12 alat riset (Q1 reproducibility)
+├── evidence/
+│   ├── screenshots/               # Bukti tangkapan layar audit visual
+│   └── hashes.sha256              # Manifest integritas kriptografi SHA-256
+├── scripts/
+│   ├── digital_observation.py     # Engine kalkulasi SAI & evaluasi RHWR
+│   ├── collect_snapshots.py       # Perekam snapshot otomatis berstempel waktu UTC
+│   ├── enumerate_lookalikes.py    # Engine deteksi impersonasi & typosquatting
+│   ├── compute_krippendorff.py    # Evaluasi reliabilitas antar-koder (fast-krippendorff)
+│   ├── run_analysis.py            # Eksekusi analisis tunggal penghasil figur & tabel
+│   └── validate_schemas.py        # Validasi skema otomatis & verifikasi SHA-256
+├── tests/
+│   ├── test_nvidia_app.py         # Uji logika dashboard & data IPSSJ (9 unit tests)
+│   ├── test_schemas.py            # Uji integritas skema tabel & hash SHA-256 (1 test)
+│   └── test_pipeline.py           # Uji reliabilitas alpha & output analisis (2 tests)
+└── paper/
+    ├── manuscript_draft_en.md     # Draf naskah ilmiah Bahasa Inggris lengkap untuk jurnal Q1
+    ├── figures/                   # Gambar publikasi resolusi tinggi (PNG 300 DPI)
+    └── tables/                    # Tabel statistik ringkasan hasil analisis (CSV)
 ```
 
 ---
 
-## 📊 Gap Analysis: Ekspektasi Publik vs Realitas Strategis (Tabel 2 Makalah)
+## 🚀 Cara Menjalankan Aplikasi & Replikasi Analisis
 
-| Dimensi | Ekspektasi Publik (10% Permukaan) | Realitas Strategis NVIDIA (90% Fondasi) | Dampak Strategis |
-| :--- | :--- | :--- | :--- |
-| **Kehadiran Digital** | Konten aktif, tren viral, dan posting harian di akun korporat utama. | *Defensive Registration* & perlindungan identitas siber terverifikasi. | *Silent Authority* & aura eksklusivitas korporat kelas atas. |
-| **Metrik Keberhasilan** | Followers jutaan, jumlah *likes* melimpah, dan *engagement rate* tinggi. | Revenue FY26 **USD 215,9 Miliar**, 91% pendapatan Data Center, dominasi pasar AI. | *Vanity metrics* sosial terbukti tak berkorelasi vs performa finansial riil. |
-| **Arsitektur Teknologi** | Produk visual yang "keren", estetis, dan instan untuk konsumsi umum. | Fondasi ekosistem CUDA 20 tahun + arsitektur chip Blackwell B200. | *Ecosystem Lock-in* struktural (*economic moat*) sulit ditembus kompetitor. |
-| **Geopolitik** | Netralitas komersial korporasi murni dalam perdagangan bebas global. | Instrumen strategis *Tech Cold War* antara AS vs China dan kedaulatan AI. | *Brand* bertransformasi dari sekadar vendor perangkat keras menjadi aset pertahanan negara. |
-| **Budaya Organisasi** | Hierarki birokrasi korporat kaku dengan pembagian divisi tradisional. | Filosofi *"The mission is the boss"*, struktur adaptif, kepemimpinan Jensen Huang. | Kecepatan eksekusi dan inovasi radikal melampaui siklus kompetitor. |
-
----
-
-## 🛡️ Protokol Mitigasi Krisis Komunikasi RHWR
-
-Untuk menutup *Interpretation Gap* dan mencegah sentimen negatif akibat keheningan publik, makalah merumuskan filter **RHWR** (*Rational, Healthy, Wise, Right*):
-
-```
-       [R] Rational  --> Berbasis bukti empiris, data telemetri laboratorium, dan validitas matematis.
-       [H] Healthy   --> Menjaga keberlangsungan mutualisme pengembang ekosistem dan mitra OEM.
-       [W] Wise      --> Peka terhadap ketegangan geopolitik (Tech Cold War) dan dinamika blok regional.
-       [R] Right     --> Patuh pada standar etika kecerdasan buatan dan regulasi perdagangan internasional.
-```
-
----
-
-## 🚀 Menjalankan Laboratorium Interaktif (Streamlit Dashboard)
-
-Repositori ini dilengkapi aplikasi web analitik interaktif berbasis **Streamlit**:
-
-### 1. Persyaratan Sistem
-- Python 3.10 atau versi lebih baru
-- Virtual environment (direkomendasikan)
-
-### 2. Instalasi Dependensi
+### 1. Menjalankan Dashboard Interaktif Streamlit
 ```bash
-git clone https://github.com/indri007/NVIDIA.git
-cd NVIDIA
-pip install -r requirements.txt
+streamlit run app.py --server.port 8503
 ```
+Akses dashboard di browser: `http://localhost:8503`  
+*Fitur lengkap:*
+1. 🧊 Branding Iceberg Matrix (Sunburst & Bobot 10% vs 90%)
+2. 🤫 Silent Authority Index (SAI) Calculator Interaktif
+3. 📱 Observasi Digital TikTok (@nvidia vs @nvidiageforce vs GTC)
+4. 📈 Finansial vs Vanity Metrics (FY21–FY26 Dual Axis Chart)
+5. ⚖️ Gap Analysis Explorer (Tabel 2 Makalah)
+6. 🛡️ Simulator Protokol Krisis RHWR
+7. 📄 Makalah IPSSJ 2026 & Pengunduh PDF Resmi
+8. 🔬 Katalog Reproduktibilitas 12 Alat Riset
+9. 📊 Dataset Multi-Kasus, Visualisasi H1–H4, & Pembaca Naskah Q1
 
-### 3. Menjalankan Dashboard
-```bash
-streamlit run app.py
-```
-Aplikasi akan aktif secara lokal di: `http://localhost:8501` (atau port yang dialokasikan).
-
-### 4. Menjalankan Uji Otomatis (Test Suite)
+### 2. Menjalankan Uji Otomatis Pytest (12/12 Tests)
 ```bash
 pytest tests/ -v
 ```
 
-### 5. Menjalankan Diagnostik CLI Observasi Digital
+### 3. Validasi Integritas Data & SHA-256 Hash
 ```bash
-python scripts/digital_observation.py
+python scripts/validate_schemas.py
+```
+
+### 4. Eksekusi Analisis End-to-End & Regenerasi Gambar Naskah
+```bash
+python scripts/run_analysis.py
 ```
 
 ---
 
-## 📂 Struktur Repositori
+## 📚 Format Sitasi Ilmiah
 
-```text
-NVIDIA/
-├── README.md                      # Dokumentasi komprehensif dwibahasa (ID/EN)
-├── app.py                         # Streamlit Interactive Analytics Dashboard
-├── requirements.txt               # Dependensi paket Python
-├── .gitignore                     # Proteksi kredensial dan cache
-├── data/
-│   ├── tiktok_observation.json    # Data observasi empiris akun TikTok & Keynote
-│   ├── financial_vs_social.csv    # Time-series finansial (FY21-FY26) vs aktivitas TikTok
-│   ├── gap_analysis.json          # 5 dimensi Gap Analysis (Tabel 2 Makalah)
-│   ├── iceberg_dimensions.json    # Taksonomi bobot 10% Visible vs 90% Invisible
-│   └── rhwr_framework.json        # Protokol filter krisis komunikasi RHWR
-├── scripts/
-│   ├── __init__.py
-│   └── digital_observation.py     # Engine kalkulasi Silent Authority Index & evaluasi RHWR
-├── tests/
-│   ├── __init__.py
-│   └── test_nvidia_app.py         # Test suite pytest (8 unit tests)
-└── View of Silent Authority...pdf # Naskah lengkap jurnal ilmiah IPSSJ Vol. 3 No. 9 2026
-```
-
----
-
-## 📚 Sitasi Ilmiah (Citations)
-
-### Format APA (7th Edition)
+### Naskah Jurnal Terbitan IPSSJ (2026)
 ```text
 Sari, I. A. K., Prasetio, A. B., & Subroto, W. T. (2026). Silent Authority dan Paradigma Branding Iceberg: Analisis Strategi Komunikasi Digital NVIDIA di Platform TikTok dalam Era Marketing 5.0. Integrative Perspectives of Social and Science Journal (IPSSJ), 3(9), 1-12.
 ```
 
-### Format BibTeX
+### Draf Naskah Multi-Kasus & Dataset (Q1 Target)
 ```bibtex
-@article{sari2026silent,
-  author    = {Sari, Indri Anjar Kartika and Prasetio, Agung Budi and Subroto, Waspodo Tjipto},
-  title     = {Silent Authority dan Paradigma Branding Iceberg: Analisis Strategi Komunikasi Digital NVIDIA di Platform TikTok dalam Era Marketing 5.0},
-  journal   = {Integrative Perspectives of Social and Science Journal (IPSSJ)},
-  volume    = {3},
-  number    = {9},
-  pages     = {1--12},
+@dataset{kartikasari2026silent,
+  author    = {Kartika Sari, Indri Anjar and Prasetio, Agung Budi and Subroto, Waspodo Tjipto},
+  title     = {Silent Authority or Neglected Asset? An Empirical Multi-Case Dataset on Corporate Defensive Registration and Third-Party Compensation on TikTok},
   year      = {2026},
-  issn      = {3064-4011}
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.10260000},
+  url       = {https://github.com/indri007/NVIDIA}
 }
 ```
-
----
-
-## 📄 Lisensi & Hak Cipta
-Hak Cipta © 2026 **Indri Anjar Kartika Sari, Agung Budi Prasetio, Waspodo Tjipto Subroto**.  
-Dirilis di bawah lisensi terbuka [MIT License](LICENSE).
