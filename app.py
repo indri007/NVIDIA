@@ -228,7 +228,7 @@ if selected_tab == "🧊 1. Branding Iceberg Matrix":
         color_discrete_map={"10% Visible Surface": "#3b82f6", "90% Invisible Foundation": "#76B900"},
         title="Distribusi Struktur Identitas Korporat NVIDIA"
     )
-    fig_sunburst.update_traces(textinfo="label+percententry")
+    fig_sunburst.update_traces(textinfo="label+percent entry")
     fig_sunburst.update_layout(margin=dict(t=40, l=0, r=0, b=0))
     st.plotly_chart(fig_sunburst, use_container_width=True)
 
