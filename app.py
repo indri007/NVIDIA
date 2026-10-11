@@ -37,69 +37,151 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS with NVIDIA Green (#76B900) & Modern Dark Theme
+# Custom CSS with Material 3D (Neumorphic Glassmorphism + NVIDIA Green #76B900)
 st.markdown("""
 <style>
-    /* Global & Typography */
-    .nvidia-green { color: #76B900 !important; font-weight: bold; }
-    .metric-card {
-        background-color: #1a1f29;
-        border-left: 4px solid #76B900;
-        border-radius: 8px;
-        padding: 18px 20px;
-        margin-bottom: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+    :root {
+        --m3-surface: #0b0f17;
+        --m3-surface-container: rgba(18, 24, 38, 0.75);
+        --m3-surface-container-high: rgba(26, 34, 52, 0.85);
+        --nvidia-green: #76b900;
+        --nvidia-glow: rgba(118, 185, 0, 0.35);
+        --cyan-quantum: #38bdf8;
+        --purple-moat: #a855f7;
     }
-    .metric-value {
-        font-size: 2.1rem;
+
+    html, body, [class*="css"] {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .nvidia-green { color: #76B900 !important; font-weight: bold; }
+
+    /* 3D Glassmorphism Hero Container */
+    .hero-3d {
+        background: linear-gradient(135deg, rgba(20, 28, 45, 0.88) 0%, rgba(10, 15, 26, 0.95) 100%);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(118, 185, 0, 0.32);
+        border-radius: 20px;
+        padding: 28px 32px;
+        margin-bottom: 24px;
+        box-shadow: 
+            0 20px 40px -15px rgba(0, 0, 0, 0.7),
+            0 0 30px -5px rgba(118, 185, 0, 0.22),
+            inset 0 1px 2px 0 rgba(255, 255, 255, 0.16);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
         font-weight: 800;
-        color: #76B900;
+        letter-spacing: -0.03em;
+        background: linear-gradient(135deg, #ffffff 40%, #76b900 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 6px;
+    }
+
+    .hero-subtitle {
+        color: #94a3b8;
+        font-size: 1.02rem;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 14px;
+    }
+
+    /* Material 3D Tactile Metric Cards */
+    .metric-card {
+        background: linear-gradient(145deg, rgba(22, 30, 48, 0.82) 0%, rgba(13, 18, 30, 0.92) 100%);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-left: 5px solid #76b900;
+        border-radius: 16px;
+        padding: 20px 22px;
+        margin-bottom: 16px;
+        box-shadow: 
+            0 12px 28px -6px rgba(0, 0, 0, 0.55),
+            0 4px 10px -2px rgba(0, 0, 0, 0.3),
+            inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+        transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .metric-card:hover {
+        transform: translateY(-4px) scale(1.01);
+        border-color: rgba(118, 185, 0, 0.45);
+        box-shadow: 
+            0 20px 36px -8px rgba(0, 0, 0, 0.7),
+            0 0 25px rgba(118, 185, 0, 0.25),
+            inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .metric-value {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #76b900;
+        text-shadow: 0 0 20px rgba(118, 185, 0, 0.35);
+        letter-spacing: -0.02em;
         margin-bottom: 4px;
     }
+
     .metric-label {
-        font-size: 0.88rem;
-        color: #9ca3af;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #94a3b8;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.08em;
     }
-    .badge-surface {
-        background-color: #3b82f6;
-        color: white;
-        padding: 3px 8px;
-        border-radius: 4px;
-        font-size: 0.75rem;
-        font-weight: 600;
-    }
-    .badge-foundation {
-        background-color: #76B900;
-        color: black;
-        padding: 3px 8px;
-        border-radius: 4px;
-        font-size: 0.75rem;
+
+    /* 3D Chips & Status Badges */
+    .m3-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 12px;
+        border-radius: 9999px;
+        font-size: 0.78rem;
         font-weight: 700;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
     }
+
+    .badge-surface {
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        color: #ffffff;
+    }
+
+    .badge-foundation {
+        background: linear-gradient(135deg, #76b900, #5a8e00);
+        color: #0b0f17;
+        font-weight: 800;
+    }
+
     .badge-system2 {
-        background-color: #8b5cf6;
-        color: white;
-        padding: 3px 8px;
-        border-radius: 4px;
-        font-size: 0.75rem;
-        font-weight: 600;
+        background: linear-gradient(135deg, #9333ea, #7e22ce);
+        color: #ffffff;
     }
+
     .callout-box {
-        background-color: #111827;
-        border: 1px solid #374151;
-        border-radius: 8px;
-        padding: 16px;
-        margin: 12px 0;
+        background: rgba(15, 21, 35, 0.75);
+        backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-left: 4px solid #38bdf8;
+        border-radius: 12px;
+        padding: 18px 22px;
+        margin: 16px 0;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
+
     .footer-text {
         text-align: center;
-        color: #6b7280;
+        color: #64748b;
         font-size: 0.85rem;
-        padding-top: 30px;
-        border-top: 1px solid #2d3748;
-        margin-top: 40px;
+        padding: 32px 0 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: 48px;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -159,16 +241,25 @@ with st.sidebar:
     st.caption(f"© {datetime.datetime.now().year} Indri Anjar Kartika Sari et al.")
 
 
-# Header Banner
+# Material 3D Header Banner
 st.markdown("""
-# <span class="nvidia-green">NVIDIA</span> Silent Authority & Branding Iceberg Hub
-**Laboratorium Analisis Strategi Komunikasi Digital & Hegemoni Industri Semikonduktor di Era Marketing 5.0**
+<div class="hero-3d">
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:12px;">
+        <span class="m3-chip badge-foundation">● MARKETING 5.0 LAB</span>
+        <span class="m3-chip badge-surface">SCOPUS / WOS Q1 READY</span>
+        <span class="m3-chip badge-system2">KRIPPENDORFF α = 0.925</span>
+        <span class="m3-chip" style="background:rgba(255,255,255,0.08); color:#38bdf8; border:1px solid rgba(56,189,248,0.3);">3NF RELATIONAL SCHEMA</span>
+    </div>
+    <div class="hero-title">NVIDIA Silent Authority & Branding Iceberg Hub</div>
+    <div class="hero-subtitle">
+        Laboratorium Analisis Strategi Komunikasi Digital & Hegemoni Industri Semikonduktor di Platform TikTok dalam Era Marketing 5.0
+    </div>
+    <div style="color: #cbd5e1; font-size: 0.92rem; font-style: italic; border-left: 3px solid #76b900; padding-left: 14px; margin-top: 10px;">
+        “Otoritas sejati tidak selalu bersuara paling keras. Dalam ekosistem digital yang bising, keheningan strategis NVIDIA adalah sinyal dominasi struktural yang ditopang oleh 90% fondasi tak terlihat.”<br>
+        <span style="color:#94a3b8; font-style:normal; font-size:0.85rem;">— <strong>Indri Anjar Kartika Sari, Agung Budi Prasetio, & Waspodo Tjipto Subroto (2026)</strong></span>
+    </div>
+</div>
 """, unsafe_allow_html=True)
-
-st.markdown("""
-> *“Otoritas sejati tidak selalu bersuara paling keras. Dalam ekosistem digital yang bising, keheningan strategis NVIDIA adalah sinyal dominasi struktural yang ditopang oleh 90% fondasi tak terlihat.”*  
-> — **Indri Anjar Kartika Sari, Agung Budi Prasetio, & Waspodo Tjipto Subroto (2026)**
-""")
 
 # ==============================================================================
 # TAB 1: BRANDING ICEBERG MATRIX
@@ -691,7 +782,8 @@ elif selected_tab == "📊 9. Dataset Multi-Kasus & Naskah Q1":
         "🚨 D3: Akun Tiruan & Squatting",
         "🌐 D4: Kompensasi Pihak Ketiga",
         "📑 D5: Dokumen Terkode",
-        "📐 Diagram Relasi Entitas (ERD)",
+        "📐 Skema Data & ERD (Schema)",
+        "📋 Aturan Riset & Rubrik (Rules)",
         "📝 Naskah Bahasa Inggris (Q1 Draft)"
     ])
 
@@ -749,23 +841,94 @@ elif selected_tab == "📊 9. Dataset Multi-Kasus & Naskah Q1":
             df_d = pd.read_csv(f5_path)
             st.dataframe(df_d, use_container_width=True)
 
-    # Sub-tab ERD
+    # Sub-tab Schema (ERD & Data Dictionary)
     with sub_tabs[5]:
-        st.markdown("#### 📐 Entity-Relationship Diagram (ERD) & Arsitektur Data Relasional")
+        st.markdown("#### 📐 Skema Data Relasional (3NF) & Entity-Relationship Diagram")
+        st.write("Arsitektur skema data dirancang dalam Third Normal Form (3NF) untuk menjamin integritas referensial, auditabilitas, dan reproduksibilitas ilmiah standar Scopus Q1.")
+        
         erd_path = os.path.join(BASE_DIR, "docs", "ERD.md")
+        schemas_path = os.path.join(BASE_DIR, "docs", "SCHEMAS_AND_RULES.md")
+        
+        c_erd1, c_erd2 = st.columns(2)
+        with c_erd1:
+            if os.path.exists(erd_path):
+                with open(erd_path, "r", encoding="utf-8") as f_erd:
+                    erd_md = f_erd.read()
+                st.download_button(
+                    label="📥 Unduh Dokumen ERD Lengkap (.md)",
+                    data=erd_md,
+                    file_name="NVIDIA_Silent_Authority_ERD.md",
+                    mime="text/markdown",
+                    key="dl_erd"
+                )
+        with c_erd2:
+            if os.path.exists(schemas_path):
+                with open(schemas_path, "r", encoding="utf-8") as f_sch:
+                    sch_md = f_sch.read()
+                st.download_button(
+                    label="📥 Unduh Dokumen Skema & Aturan Lengkap (.md)",
+                    data=sch_md,
+                    file_name="NVIDIA_Schemas_and_Rules.md",
+                    mime="text/markdown",
+                    key="dl_sch"
+                )
+        
         if os.path.exists(erd_path):
-            with open(erd_path, "r", encoding="utf-8") as f_erd:
-                erd_md = f_erd.read()
-            st.download_button(
-                label="📥 Unduh Dokumen ERD Lengkap (.md)",
-                data=erd_md,
-                file_name="NVIDIA_Silent_Authority_ERD.md",
-                mime="text/markdown"
-            )
             st.markdown(erd_md)
 
-    # Sub-tab Naskah
+    # Sub-tab Rules (Aturan Riset & Rubrik Codebook)
     with sub_tabs[6]:
+        st.markdown("#### 📋 Aturan Metodologis & Mesin Penguji Aturan (Rules Engine)")
+        st.write("Semua pengumpulan, pelabelan, dan evaluasi data diatur oleh kaidah eksplisit tanpa asumsi subjektif:")
+
+        st.markdown("##### 🧪 Interactive Rule Tester: Tipologi Kehadiran Digital (Rule 1)")
+        r_col1, r_col2 = st.columns(2)
+        with r_col1:
+            is_verified = st.toggle("Akun Terverifikasi Resmi (Blue/Gold Badge)?", value=True)
+            video_cnt = st.number_input("Jumlah Video Publik Terunggah:", min_value=0, max_value=5000, value=0)
+            days_since_post = st.number_input("Hari Sejak Unggahan Terakhir:", min_value=0, max_value=1000, value=300)
+            follower_cnt = st.number_input("Jumlah Followers Akun:", min_value=0, max_value=50000000, value=0)
+        
+        with r_col2:
+            # Evaluate Rule 1 Logic
+            if not is_verified:
+                rule_res = "placeholder"
+                rule_color = "#f59e0b"
+                rule_desc = "Akun tidak terverifikasi resmi oleh platform. Berstatus placeholder atau akun tidak terotentikasi."
+            else:
+                if video_cnt == 0:
+                    rule_res = "defensive (Silent Authority Anchor)"
+                    rule_color = "#76b900"
+                    rule_desc = "Akun resmi terverifikasi tanpa video publik. Berfungsi sebagai registrasi defensif perlindungan hak merek dari cybersquatting."
+                elif days_since_post > 180:
+                    rule_res = "dormant"
+                    rule_color = "#64748b"
+                    rule_desc = "Akun memiliki arsip video masa lalu namun tidak aktif selama >180 hari berturut-turut."
+                else:
+                    rule_res = "active"
+                    rule_color = "#3b82f6"
+                    rule_desc = "Akun aktif mengunggah konten dalam 60 hari terakhir dan memfasilitasi interaksi audiens ritel."
+            
+            st.markdown(f"""
+            <div class="metric-card" style="border-left-color: {rule_color}; margin-top: 20px;">
+                <div class="metric-label">Hasil Evaluasi Aturan (Rule 1):</div>
+                <div class="metric-value" style="color: {rule_color}; font-size: 1.6rem;">{rule_res.upper()}</div>
+                <div style="color: #cbd5e1; font-size: 0.9rem; margin-top: 6px;">{rule_desc}</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.divider()
+        st.markdown("""
+        ##### 📌 Ikhtisar 5 Kaidah Baku Penelitian (Research Rules)
+        1. **Rule 1 (Pohon Keputusan Tipologi):** Klasifikasi 4 kategori (`active`, `defensive`, `dormant`, `placeholder`) bersifat saling eksklusif (*mutually exclusive*) dan ditentukan secara mekanis.
+        2. **Rule 2 (Reliabilitas Antar-Koder):** Wajib *double-blind coding* dengan ambang batas Krippendorff's Alpha $\\alpha \\ge 0.800$ (*Robust Agreement*). Nilai capaian dataset saat ini adalah $\\alpha = 0.925$ (Tipologi) dan $\\alpha = 1.000$ (Dokumen).
+        3. **Rule 3 (Integritas Kriptografi SOP):** Setiap observasi snapshot wajib memiliki SHA-256 fingerprint terhadap berkas fisik visual yang divalidasi pada skrip otomatis `scripts/validate_schemas.py`.
+        4. **Rule 4 (Protokol Komunikasi Krisis RHWR):** Respons korporat wajib lolos 4 filter (*Rational, Healthy, Wise, Right*). Kegagalan pada 2 filter secara otomatis memicu protokol *Strategic Silence*.
+        5. **Rule 5 (Etika Penelitian Non-PII):** Tidak ada pengumpulan data identitas personal pengguna perorangan; lingkup observasi murni pada data korporasi publik dan dokumen bursa resmi (SEC).
+        """)
+
+    # Sub-tab Naskah
+    with sub_tabs[7]:
         st.markdown("#### 📄 Draf Lengkap Naskah Ilmiah (English Manuscript for Q1)")
         manuscript_path = os.path.join(BASE_DIR, "paper", "manuscript_draft_en.md")
         if os.path.exists(manuscript_path):
@@ -775,7 +938,8 @@ elif selected_tab == "📊 9. Dataset Multi-Kasus & Naskah Q1":
                 label="📥 Unduh Naskah Lengkap Markdown (.md)",
                 data=manuscript_content,
                 file_name="Silent_Authority_MultiCase_Q1_Draft.md",
-                mime="text/markdown"
+                mime="text/markdown",
+                key="dl_manuscript"
             )
             st.markdown(manuscript_content)
 
